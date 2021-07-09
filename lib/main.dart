@@ -1,5 +1,6 @@
 import 'package:company_manager_app/authentication/welcome.dart';
 import 'package:company_manager_app/routes/app_routes.dart';
+import 'package:company_manager_app/screens/Home/homeScreen.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Approutes.welcomescreen,
+      initialRoute: Approutes.homeScreen,
       routes: {
         Approutes.welcomescreen: (context) => Welcomescreen(),
+        Approutes.homeScreen: (context) => HomeScreen(),
       },
     );
   }
