@@ -1,8 +1,8 @@
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:company_manager_app/utils/common.dart';
-import 'package:draggable_bottom_sheet/draggable_bottom_sheet.dart';
 import 'package:company_manager_app/authentication/login.dart';
 
 class Welcomescreen extends StatelessWidget {
@@ -26,7 +26,7 @@ class Welcomescreen extends StatelessWidget {
                   Text(
                     "Welcome!",
                     style: TextStyle(
-                      fontSize: h * 0.03,
+                      fontSize: h * 0.028,
                       fontWeight: FontWeight.w700,
                       color: Appcolors.whitecolor,
                     ),
@@ -47,11 +47,11 @@ class Welcomescreen extends StatelessWidget {
                     child: Text(
                       "No need to visit an agent. Send 90 Currencies to 150 Countries, from your smartphone or computer",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           height: 1.4,
                           color: Appcolors.whitecolor,
                           fontWeight: FontWeight.w500,
-                          fontSize: h * 0.017),
+                          fontSize: h * 0.015),
                     ),
                   ),
                   SizedBox(
