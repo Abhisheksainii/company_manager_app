@@ -257,7 +257,7 @@ class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: widget.h * 0.24,
+      height: widget.h * 0.22,
       width: widget.w * 0.4,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
