@@ -3,6 +3,7 @@ import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 
 void main() {
   runApp(MyApp());

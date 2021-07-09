@@ -26,6 +26,7 @@ dependencies:
 
   sizer: ^2.0.13
   google_fonts: ^2.1.0
+  draggable_bottom_sheet: ^0.1.2
 
 
   # The following adds the Cupertino Icons font to your application.

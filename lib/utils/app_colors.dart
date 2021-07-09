@@ -5,5 +5,6 @@ class Appcolors {
   static const gradient = LinearGradient(
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,
-      colors: [Color(0xff017FDE), Color(0xff00B2F3)]);
+      colors: [Color(0xff025DD0), Color(0xff00C0F9)]);
+  static const whitecolor = Color(0xffFFFFFF);
 }
