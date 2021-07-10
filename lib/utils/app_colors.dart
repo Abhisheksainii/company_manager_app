@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Appcolors {
   static const primarycolor = Color(0xff00B2F3);
+  static const lightprimarycolor = Color(0xfff00C0F9);
   static const gradient = LinearGradient(
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,

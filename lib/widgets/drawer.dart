@@ -19,19 +19,28 @@ class _CustomDrawerState extends State<CustomDrawer> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SliderMenuContainer(
-        hasAppBar: true,
+        hasAppBar: false,
         isTitleCenter: false,
         appBarColor: Colors.white,
         key: _key,
         sliderMenuOpenSize: 300,
-        title: Center(
-          child: Text(
-            "Welcome!",
-            style: GoogleFonts.poppins(
-                fontSize: w * 0.045,
-                color: Colors.black,
-                fontWeight: FontWeight.w500),
-          ),
+        title: Row(
+          children: [
+            Text(
+              "Welcome!",
+              style: GoogleFonts.poppins(
+                  fontSize: w * 0.045,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+            ),
+            Container(
+              height: h * 0.048,
+              width: w * 0.048,
+              child: Image(
+                image: AssetImage(Common.assetsImages + "bell.png"),
+              ),
+            ),
+          ],
         ),
         sliderMenu: Container(
           child: Column(
