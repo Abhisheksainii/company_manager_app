@@ -1,5 +1,6 @@
 import 'package:company_manager_app/authentication/welcome.dart';
 import 'package:company_manager_app/routes/app_routes.dart';
+import 'package:company_manager_app/screens/Home/attendance.dart';
 import 'package:company_manager_app/screens/Home/homeScreen.dart';
 import 'package:company_manager_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Approutes.drawer,
+      initialRoute: Approutes.attendance,
       routes: {
         Approutes.welcomescreen: (context) => Welcomescreen(),
         Approutes.homeScreen: (context) => HomeScreen(),
         Approutes.drawer: (context) => CustomDrawer(),
+        Approutes.attendance: (context) => AttendanceScreen(),
       },
     );
   }
