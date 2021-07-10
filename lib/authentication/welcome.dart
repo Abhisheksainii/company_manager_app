@@ -60,7 +60,7 @@ class Welcomescreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onVerticalDragUpdate: (dragupdate) {
-                      Navigator.pushNamed(context, Approutes.loginScreen);
+                      Navigator.pushNamed(context, Approutes.loginscreen);
                     },
                     child: Container(
                       height: h * 0.11,

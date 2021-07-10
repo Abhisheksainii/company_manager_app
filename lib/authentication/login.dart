@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, Approutes.loginPassword);
+                      Navigator.pushNamed(context, Approutes.loginpassword);
                     },
                     child: Container(
                       alignment: Alignment.center,
