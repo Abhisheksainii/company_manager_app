@@ -81,6 +81,8 @@ flutter:
         - asset: assets/fonts/Poppins-Thin.ttf
         - asset: assets/fonts/Poppins-Italic.ttf
         - asset: assets/fonts/Poppins-ExtraLight.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

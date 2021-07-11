@@ -8,4 +8,6 @@ class Appcolors {
       end: Alignment.topRight,
       colors: [Color(0xff025DD0), Color(0xff00C0F9)]);
   static const whitecolor = Color(0xffFFFFFF);
+
+  static const goldcolor = Color(0xffF7B634);
 }
