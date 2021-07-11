@@ -326,22 +326,34 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     children: [
                       Row(
                         children: [
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "immigration",
-                            cardText: "ATTENDANCE",
-                            bottomRec: "blueRec",
+                          InkWell(
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "immigration",
+                              cardText: "ATTENDANCE",
+                              bottomRec: "blueRec",
+                            ),
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, Approutes.attendance);
+                            },
                           ),
                           SizedBox(
                             width: w * 0.088,
                           ),
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "logout 6",
-                            cardText: "LEAVE",
-                            bottomRec: "greyRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, Approutes.leaveapplication);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "logout 6",
+                              cardText: "LEAVE",
+                              bottomRec: "greyRec",
+                            ),
                           ),
                         ],
                       ),
@@ -374,12 +386,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                       Row(
                         children: [
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "user",
-                            cardText: "PROFILE",
-                            bottomRec: "blueRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, Approutes.profile);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "user",
+                              cardText: "PROFILE",
+                              bottomRec: "blueRec",
+                            ),
                           ),
                           SizedBox(
                             width: w * 0.088,

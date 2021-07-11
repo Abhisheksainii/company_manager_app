@@ -41,9 +41,14 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Image.asset(
-                        Common.assetsImages + "back.png",
-                        width: w * 0.07,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Image.asset(
+                          Common.assetsImages + "back.png",
+                          width: w * 0.07,
+                        ),
                       ),
                       SizedBox(
                         width: w * 0.06,

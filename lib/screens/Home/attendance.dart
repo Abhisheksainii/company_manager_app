@@ -28,25 +28,27 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                 child: Container(
                   child: Row(
                     children: [
-                      Container(
-                        height: h * 0.048,
-                        width: w * 0.048,
-                        child: Image(
-                          image: AssetImage(Common.assetsImages + "drawer.png"),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Image.asset(
+                          Common.assetsImages + "back.png",
+                          width: w * 0.07,
                         ),
                       ),
                       SizedBox(
                         width: w * 0.07,
                       ),
                       Text(
-                        "Welcome!",
+                        "Attendance",
                         style: GoogleFonts.poppins(
                             fontSize: w * 0.045,
                             color: Appcolors.whitecolor,
                             fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
-                        width: w * 0.5,
+                        width: w * 0.45,
                       ),
                       Container(
                         height: h * 0.048,

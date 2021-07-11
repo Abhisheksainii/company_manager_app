@@ -182,7 +182,9 @@ class LoginPassword extends StatelessWidget {
                       height: h * 0.025,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, Approutes.drawer);
+                      },
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
