@@ -6,4 +6,5 @@ class Approutes {
   static final String loginscreen = "/loginscreen";
   static final String loginpassword = "/loginpass";
   static final String profile = "/profile";
+  static final String leaveapplication = "/application";
 }

@@ -176,66 +176,366 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                   views: [
-                    Timeline.tileBuilder(
-                      builder: TimelineTileBuilder(
-                        indicatorBuilder: (context, index) =>
-                            OutlinedDotIndicator(),
-                        startConnectorBuilder: (context, index) =>
-                            DashedLineConnector(),
-                        endConnectorBuilder: (context, index) =>
-                            DashedLineConnector(),
-                        contentsBuilder: (context, index) => Padding(
+                    Container(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: w * 0.08, top: h * 0.02),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "PERSONAL",
+                              style: TextStyle(
+                                  fontSize: h * 0.026,
+                                  color: Colors.grey.shade500),
+                            ),
+                            SizedBox(
+                              height: h * 0.02,
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Blood Group",
+                                      info: "A +",
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Mobile Number",
+                                      info: "+880 1832366165",
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Religion",
+                                      info: "Islam",
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  color: Appcolors
+                                                      .lightprimarycolor,
+                                                  width: w * 0.004)),
+                                          alignment: Alignment.center,
+                                          child: Container(
+                                            child: Image.asset(
+                                              Common.assetsImages + "dot.png",
+                                              width: w * 0.035,
+                                            ),
+                                            width: w * 0.04,
+                                            decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                    color: Colors.transparent,
+                                                    width: w * 0.008)),
+                                            alignment: Alignment.center,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: h * 0.02, left: w * 0.02),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "AB -",
+                                            style: TextStyle(
+                                                fontSize: h * 0.022,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          Text(
+                                            "Blood Group",
+                                            style: TextStyle(
+                                                fontSize: h * 0.016,
+                                                color: Colors.grey.shade500),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      child: Container(
+                        child: Padding(
                           padding:
-                              EdgeInsets.only(top: 24, left: 24, bottom: 24),
+                              EdgeInsets.only(left: w * 0.08, top: h * 0.02),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                  width: 200,
-                                  child: Text(
-                                    personalinfo[index],
-                                    style: TextStyle(
-                                        fontSize: h * 0.02,
-                                        fontWeight: FontWeight.w600),
-                                  )),
                               Text(
-                                personalheading[index],
+                                "OFFICALS",
                                 style: TextStyle(
-                                    fontSize: h * 0.015,
+                                    fontSize: h * 0.026,
                                     color: Colors.grey.shade500),
+                              ),
+                              SizedBox(
+                                height: h * 0.02,
+                              ),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "Date of Birth",
+                                        info: "01 - 04 - 1983",
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "Nationality",
+                                        info: "Active",
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "National ID",
+                                        info: "Not Define",
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "Emails",
+                                        info: "HR & Admin",
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "National ID",
+                                        info: "Co founder & Chief Operations",
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Timelinee(w: w, h: h),
+                                      timelineinfo(
+                                        h: h,
+                                        w: w,
+                                        head: "National ID",
+                                        info: "Co founder & Chief Operations",
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                    color: Appcolors
+                                                        .lightprimarycolor,
+                                                    width: w * 0.004)),
+                                            alignment: Alignment.center,
+                                            child: Container(
+                                              child: Image.asset(
+                                                Common.assetsImages + "dot.png",
+                                                width: w * 0.035,
+                                              ),
+                                              width: w * 0.04,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(
+                                                      color: Colors.transparent,
+                                                      width: w * 0.008)),
+                                              alignment: Alignment.center,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: h * 0.02, left: w * 0.02),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "AB -",
+                                              style: TextStyle(
+                                                  fontSize: h * 0.022,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            Text(
+                                              "Blood Group",
+                                              style: TextStyle(
+                                                  fontSize: h * 0.016,
+                                                  color: Colors.grey.shade500),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ),
-                        itemCount: 4,
                       ),
                     ),
-                    TimelineView(
-                      scrollController: ScrollController(
-                          initialScrollOffset: 300, keepScrollOffset: true),
-                      align: TimelineAlign.rightAlign,
-                      lineWidth: 2,
-                      lineColor: Appcolors.lightprimarycolor,
-                      imageBorderColor: Appcolors.lightprimarycolor,
-                      image: [
-                        Container(
-                            padding: EdgeInsets.all(15), child: Text("gg")),
-                        Container(
-                            padding: EdgeInsets.all(15), child: Text("gg")),
-                      ],
-                      height: 150,
-                      width: MediaQuery.of(context).size.width,
-                      imageHeight: 40,
-                      children: [
-                        Container(
-                            margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
-                            child: Text("g")),
-                        Container(
-                            margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
-                            child: Text("gg")),
-                      ],
+                    Container(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: w * 0.08, top: h * 0.02),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "OTHER",
+                              style: TextStyle(
+                                  fontSize: h * 0.026,
+                                  color: Colors.grey.shade500),
+                            ),
+                            SizedBox(
+                              height: h * 0.02,
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Blood Group",
+                                      info: "A +",
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Mobile Number",
+                                      info: "+880 1832366165",
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Timelinee(w: w, h: h),
+                                    timelineinfo(
+                                      h: h,
+                                      w: w,
+                                      head: "Religion",
+                                      info: "Islam",
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  color: Appcolors
+                                                      .lightprimarycolor,
+                                                  width: w * 0.004)),
+                                          alignment: Alignment.center,
+                                          child: Container(
+                                            child: Image.asset(
+                                              Common.assetsImages + "dot.png",
+                                              width: w * 0.035,
+                                            ),
+                                            width: w * 0.04,
+                                            decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                    color: Colors.transparent,
+                                                    width: w * 0.008)),
+                                            alignment: Alignment.center,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: h * 0.02, left: w * 0.02),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "AB -",
+                                            style: TextStyle(
+                                                fontSize: h * 0.022,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          Text(
+                                            "Blood Group",
+                                            style: TextStyle(
+                                                fontSize: h * 0.016,
+                                                color: Colors.grey.shade500),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    Container(color: Colors.yellow)
                   ],
                   onChange: (index) => print(index),
                 ),
@@ -244,6 +544,78 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class timelineinfo extends StatelessWidget {
+  const timelineinfo(
+      {Key key, @required this.h, @required this.w, this.head, this.info})
+      : super(key: key);
+  final String head;
+  final String info;
+  final double h;
+  final double w;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: h * 0.065, left: w * 0.02),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            info,
+            style: TextStyle(fontSize: h * 0.022, fontWeight: FontWeight.w600),
+          ),
+          Text(
+            head,
+            style: TextStyle(fontSize: h * 0.016, color: Colors.grey.shade500),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Timelinee extends StatelessWidget {
+  const Timelinee({
+    Key key,
+    @required this.w,
+    @required this.h,
+  }) : super(key: key);
+
+  final double w;
+  final double h;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                  color: Appcolors.lightprimarycolor, width: w * 0.004)),
+          alignment: Alignment.center,
+          child: Container(
+            child: Image.asset(
+              Common.assetsImages + "dot.png",
+              width: w * 0.035,
+            ),
+            width: w * 0.04,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border:
+                    Border.all(color: Colors.transparent, width: w * 0.008)),
+            alignment: Alignment.center,
+          ),
+        ),
+        Image.asset(
+          Common.assetsImages + "line.png",
+          height: h * 0.08,
+        ),
+      ],
     );
   }
 }

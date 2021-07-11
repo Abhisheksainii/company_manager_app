@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Stack(
             children: [
               Image(
-                image: AssetImage(Common.assetsImages + "Union 45.png"),
+                image: AssetImage(Common.assetsImages + "Union 44.png"),
               ),
               Positioned(
                 top: h * 0.05,
