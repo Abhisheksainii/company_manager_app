@@ -39,7 +39,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                         width: w * 0.07,
                       ),
                       Text(
-                        "Welcome!",
+                        "Attendance",
                         style: GoogleFonts.poppins(
                             fontSize: w * 0.045,
                             color: Appcolors.whitecolor,
@@ -290,6 +290,7 @@ class _CustomCardState extends State<CustomCard> {
                     Container(
                       child: Text(
                         "${widget.cardText}",
+                        textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           fontSize: widget.w * 0.035,
                           color: Color(0xFF343434),
