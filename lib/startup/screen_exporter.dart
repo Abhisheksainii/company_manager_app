@@ -7,3 +7,4 @@ export 'package:company_manager_app/screens/Leave/LeaveApplication.dart';
 export 'package:company_manager_app/screens/Leave/ApproveApplication.dart';
 
 export 'package:company_manager_app/screens/Claim/Claim.dart';
+export 'package:company_manager_app/screens/Directory/directory.dart';

@@ -14,4 +14,5 @@ class Approutes {
   static final String approvedapllication = "/approved";
   static final String applicationforleave = "applicationforleave";
   static final String applicationforleave2 = "applicationforleave2";
+  static final String directory = "/directory";
 }
