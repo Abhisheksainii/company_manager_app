@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/authentication/login.dart';
+import 'package:company_manager_app/routes/app_routes.dart';
 
 class Welcomescreen extends StatelessWidget {
   @override
@@ -59,8 +60,7 @@ class Welcomescreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onVerticalDragUpdate: (dragupdate) {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => LoginScreen()));
+                      Navigator.pushNamed(context, Approutes.loginscreen);
                     },
                     child: Container(
                       height: h * 0.11,

@@ -1,7 +1,11 @@
+import 'package:company_manager_app/authentication/login.dart';
+import 'package:company_manager_app/authentication/loginpass.dart';
 import 'package:company_manager_app/authentication/welcome.dart';
 import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/screens/Home/attendance.dart';
 import 'package:company_manager_app/screens/Home/homeScreen.dart';
+import 'package:company_manager_app/screens/Leave/LeaveApplication.dart';
+import 'package:company_manager_app/screens/profile/profilescreen.dart';
 import 'package:company_manager_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -19,12 +23,16 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Approutes.attendance,
+      initialRoute: Approutes.welcomescreen,
       routes: {
         Approutes.welcomescreen: (context) => Welcomescreen(),
         Approutes.homeScreen: (context) => HomeScreen(),
         Approutes.drawer: (context) => CustomDrawer(),
         Approutes.attendance: (context) => AttendanceScreen(),
+        Approutes.loginscreen: (context) => LoginScreen(),
+        Approutes.loginpassword: (context) => LoginPassword(),
+        Approutes.profile: (context) => ProfileScreen(),
+        Approutes.leaveapplication: (context) => LeaveApplication(),
       },
     );
   }

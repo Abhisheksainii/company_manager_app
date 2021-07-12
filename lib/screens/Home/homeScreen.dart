@@ -1,5 +1,6 @@
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:company_manager_app/utils/common.dart';
+import 'package:company_manager_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Stack(
             children: [
               Image(
-                image: AssetImage(Common.assetsImages + "Union 45.png"),
+                image: AssetImage(Common.assetsImages + "Union 44.png"),
               ),
               Positioned(
                 top: h * 0.05,
@@ -28,11 +29,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   child: Row(
                     children: [
-                      Container(
-                        height: h * 0.048,
-                        width: w * 0.048,
-                        child: Image(
-                          image: AssetImage(Common.assetsImages + "drawer.png"),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: h * 0.048,
+                          width: w * 0.048,
+                          child: Image(
+                            image:
+                                AssetImage(Common.assetsImages + "drawer.png"),
+                          ),
                         ),
                       ),
                       SizedBox(

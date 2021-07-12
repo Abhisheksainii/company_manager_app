@@ -19,19 +19,28 @@ class _CustomDrawerState extends State<CustomDrawer> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SliderMenuContainer(
-        hasAppBar: true,
+        hasAppBar: false,
         isTitleCenter: false,
         appBarColor: Colors.white,
         key: _key,
         sliderMenuOpenSize: 300,
-        title: Center(
-          child: Text(
-            "Welcome!",
-            style: GoogleFonts.poppins(
-                fontSize: w * 0.045,
-                color: Colors.black,
-                fontWeight: FontWeight.w500),
-          ),
+        title: Row(
+          children: [
+            Text(
+              "Welcome!",
+              style: GoogleFonts.poppins(
+                  fontSize: w * 0.045,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+            ),
+            Container(
+              height: h * 0.048,
+              width: w * 0.048,
+              child: Image(
+                image: AssetImage(Common.assetsImages + "bell.png"),
+              ),
+            ),
+          ],
         ),
         sliderMenu: Container(
           child: Column(
@@ -181,7 +190,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             child: Stack(
               children: [
                 Image(
-                  image: AssetImage(Common.assetsImages + "Union 45.png"),
+                  image: AssetImage(Common.assetsImages + "Union 44.png"),
                 ),
                 Positioned(
                   top: h * 0.05,
@@ -317,22 +326,34 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     children: [
                       Row(
                         children: [
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "immigration",
-                            cardText: "ATTENDANCE",
-                            bottomRec: "blueRec",
+                          InkWell(
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "immigration",
+                              cardText: "ATTENDANCE",
+                              bottomRec: "blueRec",
+                            ),
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, Approutes.attendance);
+                            },
                           ),
                           SizedBox(
                             width: w * 0.088,
                           ),
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "logout 6",
-                            cardText: "LEAVE",
-                            bottomRec: "greyRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, Approutes.leaveapplication);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "logout 6",
+                              cardText: "LEAVE",
+                              bottomRec: "greyRec",
+                            ),
                           ),
                         ],
                       ),
@@ -365,12 +386,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                       Row(
                         children: [
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "user",
-                            cardText: "PROFILE",
-                            bottomRec: "blueRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, Approutes.profile);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "user",
+                              cardText: "PROFILE",
+                              bottomRec: "blueRec",
+                            ),
                           ),
                           SizedBox(
                             width: w * 0.088,
