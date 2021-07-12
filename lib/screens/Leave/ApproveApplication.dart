@@ -4,27 +4,21 @@ import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
 
-class TileSettings {
+class TileSetting {
   String tilecolor;
   bool iseditable;
-  TileSettings({this.tilecolor, this.iseditable});
+  TileSetting({this.tilecolor, this.iseditable});
 }
 
-class LeaveApplication extends StatelessWidget {
-  final titles = ["List 1", "List 2", "List 3"];
-  final subtitles = [
-    "Here is list 1 subtitle",
-    "Here is list 2 subtitle",
-    "Here is list 3 subtitle"
-  ];
-  List<TileSettings> tilesettings = [
-    TileSettings(tilecolor: "green", iseditable: false),
-    TileSettings(tilecolor: "blue", iseditable: false),
-    TileSettings(tilecolor: "blue", iseditable: true),
-    TileSettings(tilecolor: "blue", iseditable: false),
-    TileSettings(tilecolor: "gold", iseditable: false),
-    TileSettings(tilecolor: "gold", iseditable: false),
-    TileSettings(tilecolor: "green", iseditable: false),
+class ApproveApplication extends StatelessWidget {
+  List<TileSetting> tilesettings = [
+    TileSetting(tilecolor: "green", iseditable: false),
+    TileSetting(tilecolor: "blue", iseditable: false),
+    TileSetting(tilecolor: "blue", iseditable: true),
+    TileSetting(tilecolor: "blue", iseditable: false),
+    TileSetting(tilecolor: "gold", iseditable: false),
+    TileSetting(tilecolor: "gold", iseditable: false),
+    TileSetting(tilecolor: "green", iseditable: false),
   ];
   Color TileColor(int index) {
     if (tilesettings[index].tilecolor == "green") {
@@ -36,7 +30,6 @@ class LeaveApplication extends StatelessWidget {
     }
   }
 
-  final icons = [Icons.ac_unit, Icons.access_alarm, Icons.access_time];
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -74,7 +67,7 @@ class LeaveApplication extends StatelessWidget {
                           width: w * 0.06,
                         ),
                         Text(
-                          "Leave Application",
+                          "Approve Application",
                           style: GoogleFonts.poppins(
                               fontSize: w * 0.045,
                               color: Appcolors.whitecolor,
@@ -83,16 +76,12 @@ class LeaveApplication extends StatelessWidget {
                         SizedBox(
                           width: w * 0.18,
                         ),
-                        Image.asset(
-                          Common.assetsImages + "search.png",
-                          width: w * 0.06,
-                        ),
                         SizedBox(
                           width: w * 0.07,
                         ),
                         Image.asset(
-                          Common.assetsImages + "bell.png",
-                          width: w * 0.05,
+                          Common.assetsImages + "search.png",
+                          width: w * 0.06,
                         ),
                       ],
                     ),
@@ -157,26 +146,10 @@ class LeaveApplication extends StatelessWidget {
                           ),
                           Padding(
                             padding: EdgeInsets.only(
-                                right: 10.0, top: h * 0.054, bottom: 10),
+                                right: 12.0, top: h * 0.054, bottom: 10),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      "5.0",
-                                      style: TextStyle(
-                                          fontSize: h * 0.018,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                    Text(
-                                      "(Annual)",
-                                      style: TextStyle(
-                                          fontSize: h * 0.013,
-                                          color: Colors.grey.shade500),
-                                    ),
-                                  ],
-                                ),
                                 Row(
                                   children: [
                                     Text(
@@ -185,34 +158,24 @@ class LeaveApplication extends StatelessWidget {
                                           fontSize: h * 0.013,
                                           color: Colors.grey.shade500),
                                     ),
+                                  ],
+                                ),
+                                SizedBox(height: h * 0.058),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      Common.assetsImages + "greentick.png",
+                                      width: w * 0.045,
+                                    ),
                                     SizedBox(
                                       width: w * 0.01,
                                     ),
                                     Text(
-                                      "Apply Date",
+                                      "Approve Application",
                                       style: TextStyle(
-                                          color: Appcolors.lightprimarycolor,
-                                          fontSize: h * 0.013,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: h * 0.02),
-                                Row(
-                                  children: [
-                                    Visibility(
-                                      child: Image.asset(
-                                        Common.assetsImages + "editbox.png",
-                                        width: w * 0.065,
-                                      ),
-                                      visible: tilesettings[index].iseditable
-                                          ? true
-                                          : false,
-                                    ),
-                                    SizedBox(width: w * 0.02),
-                                    Image.asset(
-                                      Common.assetsImages + "eyebox.png",
-                                      width: w * 0.065,
+                                          fontSize: h * 0.0125,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xff02D07E)),
                                     ),
                                   ],
                                 ),

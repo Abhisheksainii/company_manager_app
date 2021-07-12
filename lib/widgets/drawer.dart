@@ -372,12 +372,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           SizedBox(
                             width: w * 0.088,
                           ),
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "clipboard",
-                            cardText: "CLAIM",
-                            bottomRec: "blueRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, Approutes.claim);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "clipboard",
+                              cardText: "CLAIM",
+                              bottomRec: "blueRec",
+                            ),
                           ),
                         ],
                       ),

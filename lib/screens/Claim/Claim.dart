@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
+
+import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
 
-class TileSettings {
+class TileSettingss {
   String tilecolor;
   bool iseditable;
-  TileSettings({this.tilecolor, this.iseditable});
+  TileSettingss({this.tilecolor, this.iseditable});
 }
 
-class LeaveApplication extends StatelessWidget {
+class Claim extends StatelessWidget {
   final titles = ["List 1", "List 2", "List 3"];
   final subtitles = [
     "Here is list 1 subtitle",
     "Here is list 2 subtitle",
     "Here is list 3 subtitle"
   ];
-  List<TileSettings> tilesettings = [
-    TileSettings(tilecolor: "green", iseditable: false),
-    TileSettings(tilecolor: "blue", iseditable: false),
-    TileSettings(tilecolor: "blue", iseditable: true),
-    TileSettings(tilecolor: "blue", iseditable: false),
-    TileSettings(tilecolor: "gold", iseditable: false),
-    TileSettings(tilecolor: "gold", iseditable: false),
-    TileSettings(tilecolor: "green", iseditable: false),
+  List<TileSettingss> tilesettings = [
+    TileSettingss(tilecolor: "green", iseditable: false),
+    TileSettingss(tilecolor: "blue", iseditable: false),
+    TileSettingss(tilecolor: "blue", iseditable: true),
+    TileSettingss(tilecolor: "blue", iseditable: false),
+    TileSettingss(tilecolor: "gold", iseditable: false),
+    TileSettingss(tilecolor: "gold", iseditable: false),
+    TileSettingss(tilecolor: "green", iseditable: false),
   ];
   Color TileColor(int index) {
     if (tilesettings[index].tilecolor == "green") {
@@ -74,14 +76,14 @@ class LeaveApplication extends StatelessWidget {
                           width: w * 0.06,
                         ),
                         Text(
-                          "Leave Application",
+                          "Claim",
                           style: GoogleFonts.poppins(
                               fontSize: w * 0.045,
                               color: Appcolors.whitecolor,
                               fontWeight: FontWeight.w600),
                         ),
                         SizedBox(
-                          width: w * 0.18,
+                          width: w * 0.46,
                         ),
                         Image.asset(
                           Common.assetsImages + "search.png",
@@ -139,7 +141,7 @@ class LeaveApplication extends StatelessWidget {
                                   height: h * 0.01,
                                 ),
                                 Text(
-                                  "Approver",
+                                  "Co - Founder",
                                   style: TextStyle(
                                       color: Color(0xff025DD0),
                                       fontSize: h * 0.0115,
@@ -164,36 +166,27 @@ class LeaveApplication extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      "5.0",
+                                      "200.00",
                                       style: TextStyle(
                                           fontSize: h * 0.018,
                                           fontWeight: FontWeight.w600),
-                                    ),
-                                    Text(
-                                      "(Annual)",
-                                      style: TextStyle(
-                                          fontSize: h * 0.013,
-                                          color: Colors.grey.shade500),
                                     ),
                                   ],
                                 ),
                                 Row(
                                   children: [
                                     Text(
-                                      "21 June,2021",
+                                      "150,00",
                                       style: TextStyle(
                                           fontSize: h * 0.013,
                                           color: Colors.grey.shade500),
                                     ),
-                                    SizedBox(
-                                      width: w * 0.01,
-                                    ),
                                     Text(
-                                      "Apply Date",
+                                      "( Santioned )",
                                       style: TextStyle(
-                                          color: Appcolors.lightprimarycolor,
-                                          fontSize: h * 0.013,
-                                          fontWeight: FontWeight.w600),
+                                        color: Colors.grey.shade500,
+                                        fontSize: h * 0.013,
+                                      ),
                                     ),
                                   ],
                                 ),
