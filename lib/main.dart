@@ -10,6 +10,8 @@ import 'package:company_manager_app/screens/Home/homeScreen.dart';
 import 'package:company_manager_app/screens/Home/leave.dart';
 import 'package:company_manager_app/screens/Leave/ApproveApplication.dart';
 import 'package:company_manager_app/screens/Leave/LeaveApplication.dart';
+import 'package:company_manager_app/screens/Leave/applicationforleave.dart';
+import 'package:company_manager_app/screens/Leave/applicationforleave2.dart';
 import 'package:company_manager_app/screens/profile/profilescreen.dart';
 import 'package:company_manager_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Approutes.welcomescreen,
+      initialRoute: Approutes.applicationforleave2,
       routes: {
         Approutes.welcomescreen: (context) => Welcomescreen(),
         Approutes.homeScreen: (context) => HomeScreen(),
@@ -43,6 +45,8 @@ class MyApp extends StatelessWidget {
         Approutes.myattendance: (context) => MyAttendence(),
         Approutes.claim: (context) => Claim(),
         Approutes.approvedapllication: (context) => ApproveApplication(),
+        Approutes.applicationforleave: (context) => ApplicationForleave(),
+        Approutes.applicationforleave2: (context) => ApplicationForleave2(),
       },
     );
   }
