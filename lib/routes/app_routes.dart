@@ -11,6 +11,7 @@ class Approutes {
   static final String selfattendance = "/selfAttendance";
   static final String myattendance = "/myAttendance";
   static final String claim = "/claim";
+  static final String claimEntry = "/claimEntry";
   static final String approvedapllication = "/approved";
   static final String applicationforleave = "applicationforleave";
   static final String applicationforleave2 = "applicationforleave2";
