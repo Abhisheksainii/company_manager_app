@@ -8,6 +8,7 @@ class Approutes {
   static final String profile = "/profile";
   static final String leaveapplication = "/application";
   static final String leaveScreen = "/leave";
+  static final String leaveCalendar = "/leaveCalendar";
   static final String selfattendance = "/selfAttendance";
   static final String myattendance = "/myAttendance";
   static final String claim = "/claim";

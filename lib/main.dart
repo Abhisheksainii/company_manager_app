@@ -14,6 +14,7 @@ import 'package:company_manager_app/screens/Leave/ApproveApplication.dart';
 import 'package:company_manager_app/screens/Leave/LeaveApplication.dart';
 import 'package:company_manager_app/screens/Leave/applicationforleave.dart';
 import 'package:company_manager_app/screens/Leave/applicationforleave2.dart';
+import 'package:company_manager_app/screens/Leave/leaveCalendar.dart';
 import 'package:company_manager_app/screens/profile/profilescreen.dart';
 import 'package:company_manager_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Approutes.claimEntry,
+      initialRoute: Approutes.leaveCalendar,
       routes: {
         Approutes.welcomescreen: (context) => Welcomescreen(),
         Approutes.homeScreen: (context) => HomeScreen(),
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         Approutes.profile: (context) => ProfileScreen(),
         Approutes.leaveapplication: (context) => LeaveApplication(),
         Approutes.leaveScreen: (context) => LeaveScreen(),
+        Approutes.leaveCalendar: (context) => LeaveCalendar(),
         Approutes.selfattendance: (context) => SelfAttendence(),
         Approutes.myattendance: (context) => MyAttendence(),
         Approutes.claim: (context) => Claim(),
