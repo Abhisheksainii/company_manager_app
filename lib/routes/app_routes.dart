@@ -17,4 +17,5 @@ class Approutes {
   static final String applicationforleave = "applicationforleave";
   static final String applicationforleave2 = "applicationforleave2";
   static final String directory = "/directory";
+  static final String salary = "/salary";
 }
