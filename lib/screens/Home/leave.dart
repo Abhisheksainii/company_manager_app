@@ -1,3 +1,4 @@
+import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:flutter/material.dart';
@@ -157,22 +158,34 @@ class _LeaveScreenState extends State<LeaveScreen> {
                   children: [
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "leave",
-                          cardText: "LEAVE CALENDER",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.leaveCalendar);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "leave",
+                            cardText: "LEAVE CALENDER",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "balance",
-                          cardText: "EMPLOYEE LEAVE BALANCE",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.leaveapplication);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "balance",
+                            cardText: "EMPLOYEE LEAVE BALANCE",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                       ],
                     ),
@@ -191,12 +204,18 @@ class _LeaveScreenState extends State<LeaveScreen> {
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "resume",
-                          cardText: "MY LEAVE APPLICATION",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.applicationforleave);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "resume",
+                            cardText: "MY LEAVE APPLICATION",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                       ],
                     ),
@@ -215,12 +234,18 @@ class _LeaveScreenState extends State<LeaveScreen> {
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "document",
-                          cardText: "APPROVE APPLICATION",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.approvedapllication);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "document",
+                            cardText: "APPROVE APPLICATION",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                       ],
                     ),

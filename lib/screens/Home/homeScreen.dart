@@ -1,3 +1,4 @@
+import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/widgets/drawer.dart';
@@ -160,22 +161,34 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "immigration",
-                          cardText: "ATTENDANCE",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.attendance);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "immigration",
+                            cardText: "ATTENDANCE",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "logout 6",
-                          cardText: "LEAVE",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.leaveScreen);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "logout 6",
+                            cardText: "LEAVE",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                       ],
                     ),
@@ -184,22 +197,33 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "Contacts",
-                          cardText: "DIRECTORY",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.directory);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "Contacts",
+                            cardText: "DIRECTORY",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "clipboard",
-                          cardText: "CLAIM",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(Approutes.claim);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "clipboard",
+                            cardText: "CLAIM",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                       ],
                     ),
@@ -208,22 +232,32 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "user",
-                          cardText: "PROFILE",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(Approutes.profile);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "user",
+                            cardText: "PROFILE",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "wallet",
-                          cardText: "SALARY",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(Approutes.salary);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "wallet",
+                            cardText: "SALARY",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                       ],
                     ),

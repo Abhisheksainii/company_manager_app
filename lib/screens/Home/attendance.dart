@@ -1,3 +1,4 @@
+import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:flutter/material.dart';
@@ -157,12 +158,18 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                   children: [
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "attendance",
-                          cardText: "MY ATTENDANCE",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.myattendance);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "attendance",
+                            cardText: "MY ATTENDANCE",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
@@ -181,22 +188,34 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                     ),
                     Row(
                       children: [
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "Inout",
-                          cardText: "IN/OUT ATTENDANCE",
-                          bottomRec: "greyRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.selfattendance);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "Inout",
+                            cardText: "IN/OUT ATTENDANCE",
+                            bottomRec: "greyRec",
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.088,
                         ),
-                        CustomCard(
-                          h: h,
-                          w: w,
-                          imgPath: "clipboard",
-                          cardText: "APPROVE RECONCILIATION",
-                          bottomRec: "blueRec",
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Approutes.claimEntry);
+                          },
+                          child: CustomCard(
+                            h: h,
+                            w: w,
+                            imgPath: "clipboard",
+                            cardText: "APPROVE RECONCILIATION",
+                            bottomRec: "blueRec",
+                          ),
                         ),
                       ],
                     ),
