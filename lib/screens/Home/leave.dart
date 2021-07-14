@@ -63,7 +63,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.085,
+                top: h * 0.08,
                 left: w * 0.055,
                 child: Container(
                   child: Row(
@@ -121,7 +121,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.18,
+                top: h * 0.17,
                 left: w * 0.05,
                 child: Container(
                   child: Column(
@@ -152,7 +152,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.25,
+                top: h * 0.24,
                 left: w * 0.06,
                 child: Column(
                   children: [
@@ -198,7 +198,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                           h: h,
                           w: w,
                           imgPath: "balance",
-                          cardText: "MY LEAVE BALANCE",
+                          cardText: "MY LEAVE          BALANCE",
                           bottomRec: "greyRec",
                         ),
                         SizedBox(
@@ -213,7 +213,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                             h: h,
                             w: w,
                             imgPath: "resume",
-                            cardText: "MY LEAVE APPLICATION",
+                            cardText: "MY LEAVE      APPLICATION",
                             bottomRec: "blueRec",
                           ),
                         ),
@@ -228,7 +228,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                           h: h,
                           w: w,
                           imgPath: "cv",
-                          cardText: "MY VISIT APPLICATION",
+                          cardText: "MY VISIT      APPLICATION",
                           bottomRec: "blueRec",
                         ),
                         SizedBox(
@@ -243,7 +243,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                             h: h,
                             w: w,
                             imgPath: "document",
-                            cardText: "APPROVE APPLICATION",
+                            cardText: "APPROVE           APPLICATION",
                             bottomRec: "greyRec",
                           ),
                         ),
