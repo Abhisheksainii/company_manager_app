@@ -12,6 +12,7 @@ class Welcomescreen extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Appcolors.lightprimarycolor,
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(

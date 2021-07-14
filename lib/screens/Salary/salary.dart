@@ -17,7 +17,7 @@ class Salary extends StatelessWidget {
                   image: AssetImage(Common.assetsImages + "Rectangle.png"),
                   fit: BoxFit.cover),
             ),
-            height: 155,
+            height: h * 0.19,
           ),
         ),
         Padding(
@@ -81,9 +81,8 @@ class Salary extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          top: h * 0.19,
-          left: w * 0.43,
+        Padding(
+          padding: EdgeInsets.only(left: w * 0.42, top: h * 0.19),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

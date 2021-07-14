@@ -20,8 +20,12 @@ class _LeaveScreenState extends State<LeaveScreen> {
         child: Container(
           child: Stack(
             children: [
-              Image(
-                image: AssetImage(Common.assetsImages + "Union 44.png"),
+              Container(
+                height: 233,
+                child: Image(
+                  image: AssetImage(Common.assetsImages + "Union 44.png"),
+                  fit: BoxFit.cover,
+                ),
               ),
               Positioned(
                 top: h * 0.05,
@@ -153,7 +157,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
               ),
               Positioned(
                 top: h * 0.235,
-                left: w * 0.06,
+                left: w * 0.078,
                 child: Column(
                   children: [
                     Row(
@@ -172,7 +176,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                           ),
                         ),
                         SizedBox(
-                          width: w * 0.088,
+                          width: w * 0.05,
                         ),
                         InkWell(
                           onTap: () {
@@ -202,7 +206,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                           bottomRec: "greyRec",
                         ),
                         SizedBox(
-                          width: w * 0.088,
+                          width: w * 0.05,
                         ),
                         InkWell(
                           onTap: () {
@@ -232,7 +236,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                           bottomRec: "blueRec",
                         ),
                         SizedBox(
-                          width: w * 0.088,
+                          width: w * 0.05,
                         ),
                         InkWell(
                           onTap: () {
