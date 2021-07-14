@@ -11,6 +11,7 @@ class LoginScreen extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Stack(
           children: [
@@ -68,8 +69,14 @@ class LoginScreen extends StatelessWidget {
                   ),
                   Container(
                     width: w * 0.8,
-                    child: TextField(
-                      style: TextStyle(fontSize: h * 0.023),
+                    child: Theme(
+                      data: ThemeData(
+                        primaryColor: Appcolors.lightprimarycolor,
+                      ),
+                      child: TextField(
+                        obscureText: true,
+                        style: TextStyle(fontSize: h * 0.023),
+                      ),
                     ),
                   ),
                   SizedBox(

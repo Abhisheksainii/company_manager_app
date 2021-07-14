@@ -56,15 +56,14 @@ class Welcomescreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: h * 0.22,
+                    height: h * 0.28,
                   ),
                   GestureDetector(
                     onVerticalDragUpdate: (dragupdate) {
                       Navigator.pushNamed(context, Approutes.loginscreen);
                     },
                     child: Container(
-                      height: h * 0.11,
-                      width: w * 1,
+                      height: h * 0.113,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(

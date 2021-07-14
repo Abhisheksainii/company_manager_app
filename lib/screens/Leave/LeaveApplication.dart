@@ -48,7 +48,7 @@ class LeaveApplication extends StatelessWidget {
           child: Column(children: [
             Container(
               width: w * 1,
-              height: h * 0.132,
+              height: h * 0.1318,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Common.assetsImages + "Union 45.png"),

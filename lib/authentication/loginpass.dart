@@ -47,11 +47,15 @@ class LoginPassword extends StatelessWidget {
                     height: height * 0.02,
                   ),
                   Theme(
-                    data: Theme.of(context)
-                        .copyWith(accentColor: Colors.grey.shade500),
+                    data: Theme.of(context).copyWith(
+                        primaryColor: Colors.grey.shade300,
+                        unselectedWidgetColor: Colors.grey.shade300),
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
                           borderSide: BorderSide(color: Colors.grey.shade500),
                         ),
                         labelStyle: new TextStyle(color: Colors.green),
@@ -61,7 +65,7 @@ class LoginPassword extends StatelessWidget {
                         ),
                         hintStyle: TextStyle(
                             fontStyle: FontStyle.italic,
-                            fontSize: height * 0.016,
+                            fontSize: height * 0.017,
                             color: Colors.grey.shade500),
                         hintText: "Email Address here...",
                       ),
@@ -99,6 +103,7 @@ class LoginPassword extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Stack(
           children: [
@@ -157,8 +162,13 @@ class LoginPassword extends StatelessWidget {
                     ),
                     Container(
                       width: w * 0.8,
-                      child: TextField(
-                        style: TextStyle(fontSize: h * 0.023),
+                      child: Theme(
+                        data: ThemeData(
+                          primaryColor: Appcolors.lightprimarycolor,
+                        ),
+                        child: TextField(
+                          style: TextStyle(fontSize: h * 0.023),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -173,9 +183,14 @@ class LoginPassword extends StatelessWidget {
                     ),
                     Container(
                       width: w * 0.8,
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(fontSize: h * 0.023),
+                      child: Theme(
+                        data: ThemeData(
+                          primaryColor: Appcolors.lightprimarycolor,
+                        ),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(fontSize: h * 0.023),
+                        ),
                       ),
                     ),
                     SizedBox(
