@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.085,
+                top: h * 0.078,
                 left: w * 0.055,
                 child: Container(
                   child: Row(
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.18,
+                top: h * 0.17,
                 left: w * 0.05,
                 child: Container(
                   child: Column(
@@ -155,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.25,
+                top: h * 0.238,
                 left: w * 0.06,
                 child: Column(
                   children: [

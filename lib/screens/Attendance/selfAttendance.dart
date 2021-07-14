@@ -19,8 +19,8 @@ class _SelfAttendenceState extends State<SelfAttendence> {
         child: Column(
           children: [
             Container(
-              width: w * 1.8,
-              height: h * 0.137,
+              width: w * 1,
+              height: h * 0.1318,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Common.assetsImages + "Union 45.png"),
@@ -84,7 +84,7 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                 child: Stack(
                   children: [
                     Positioned(
-                      top: h * 0.45,
+                      top: h * 0.42,
                       left: w * 0.78,
                       child: Container(
                         child: Image.asset(
@@ -104,10 +104,10 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                       ),
                     ),
                     Positioned(
-                      top: h * 0.55,
+                      top: h * 0.52,
                       left: w * 0.05,
                       child: Container(
-                        height: h * 0.28,
+                        height: h * 0.3,
                         width: w * 0.9,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
@@ -146,9 +146,9 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                                             color: Color(0xFFEFEFEF),
                                           ),
                                         ),
-                                        hintMaxLines: 4,
+                                        hintMaxLines: 7,
                                         hintText:
-                                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+                                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.                                                                                                                                                                                                   ",
                                         hintStyle:
                                             TextStyle(fontSize: w * 0.032),
                                       ),
@@ -156,7 +156,7 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: h * 0.015,
+                                  height: h * 0.04,
                                 ),
                                 Row(
                                   children: [
@@ -166,8 +166,8 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                                             BorderRadius.circular(2.0),
                                         color: Color(0xFF02D07E),
                                       ),
-                                      height: h * 0.08,
-                                      width: w * 0.38,
+                                      height: h * 0.065,
+                                      width: w * 0.39,
                                       child: Center(
                                         child: Text(
                                           "In Time",
@@ -180,7 +180,7 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: w * 0.037,
+                                      width: w * 0.02,
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
@@ -188,8 +188,8 @@ class _SelfAttendenceState extends State<SelfAttendence> {
                                             BorderRadius.circular(2.0),
                                         color: Color(0xFFFF4B4B),
                                       ),
-                                      height: h * 0.08,
-                                      width: w * 0.38,
+                                      height: h * 0.065,
+                                      width: w * 0.39,
                                       child: Center(
                                         child: Text(
                                           "Out Time",

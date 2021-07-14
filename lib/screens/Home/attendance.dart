@@ -238,7 +238,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                           h: h,
                           w: w,
                           imgPath: "monitor",
-                          cardText: "MONITOR ATTENDANCE",
+                          cardText: "MONITOR   ATTENDANCE",
                           bottomRec: "greyRec",
                         ),
                       ],

@@ -71,12 +71,11 @@ class _MyAttendenceState extends State<MyAttendence> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-        height: h,
         child: Column(
           children: [
             Container(
-              width: w * 1.8,
-              height: h * 0.137,
+              width: w * 1,
+              height: h * 0.1318,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Common.assetsImages + "Union 45.png"),
