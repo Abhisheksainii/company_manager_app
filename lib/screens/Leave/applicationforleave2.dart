@@ -74,6 +74,7 @@ class _ApplicationForleave2State extends State<ApplicationForleave2> {
                           ),
                           Container(
                             width: w * 0.9,
+                            height: h * 0.06,
                             child: Theme(
                               data: ThemeData(
                                 primaryColor: Color(0xFFEFEFEF),
@@ -116,6 +117,7 @@ class _ApplicationForleave2State extends State<ApplicationForleave2> {
                           ),
                           Container(
                             width: w * 0.9,
+                            height: h * 0.06,
                             child: Theme(
                               data: ThemeData(
                                 primaryColor: Color(0xFFEFEFEF),
@@ -206,6 +208,7 @@ class _ApplicationForleave2State extends State<ApplicationForleave2> {
                           ),
                           Container(
                             width: w * 0.9,
+                            height: h * 0.06,
                             child: Theme(
                               data: ThemeData(
                                 primaryColor: Color(0xFFEFEFEF),

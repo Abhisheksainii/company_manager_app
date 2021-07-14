@@ -33,9 +33,14 @@ class _ClaimEntryState extends State<ClaimEntry> {
                   children: [
                     Row(
                       children: [
-                        Image.asset(
-                          Common.assetsImages + "back.png",
-                          width: w * 0.07,
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Image.asset(
+                            Common.assetsImages + "back.png",
+                            width: w * 0.07,
+                          ),
                         ),
                         SizedBox(
                           width: w * 0.06,
@@ -72,7 +77,8 @@ class _ClaimEntryState extends State<ClaimEntry> {
                                     fontSize: w * 0.03),
                               ),
                               Container(
-                                width: w * 0.43,
+                                width: w * 0.45,
+                                height: h * 0.06,
                                 child: Theme(
                                   data: ThemeData(
                                     primaryColor: Color(0xFFEFEFEF),
@@ -101,7 +107,7 @@ class _ClaimEntryState extends State<ClaimEntry> {
                             ],
                           ),
                         ),
-                        SizedBox(width: w * 0.04),
+                        SizedBox(width: w * 0.015),
                         Container(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +119,8 @@ class _ClaimEntryState extends State<ClaimEntry> {
                                     fontSize: w * 0.03),
                               ),
                               Container(
-                                width: w * 0.43,
+                                width: w * 0.45,
+                                height: h * 0.06,
                                 child: Theme(
                                   data: ThemeData(
                                     primaryColor: Color(0xFFEFEFEF),
@@ -160,7 +167,8 @@ class _ClaimEntryState extends State<ClaimEntry> {
                                     fontSize: w * 0.03),
                               ),
                               Container(
-                                width: w * 0.43,
+                                height: h * 0.06,
+                                width: w * 0.45,
                                 child: Theme(
                                   data: ThemeData(
                                     primaryColor: Color(0xFFEFEFEF),
@@ -185,7 +193,7 @@ class _ClaimEntryState extends State<ClaimEntry> {
                             ],
                           ),
                         ),
-                        SizedBox(width: w * 0.04),
+                        SizedBox(width: w * 0.015),
                         Container(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,7 +205,8 @@ class _ClaimEntryState extends State<ClaimEntry> {
                                     fontSize: w * 0.03),
                               ),
                               Container(
-                                width: w * 0.43,
+                                height: h * 0.06,
+                                width: w * 0.45,
                                 child: Theme(
                                   data: ThemeData(
                                     primaryColor: Color(0xFFEFEFEF),
