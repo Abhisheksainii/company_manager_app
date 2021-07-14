@@ -26,7 +26,7 @@ class _ApplicationForleave2State extends State<ApplicationForleave2> {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: w * 0.04, top: h * 0.03),
+                padding: EdgeInsets.only(left: w * 0.04, top: h * 0.04),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

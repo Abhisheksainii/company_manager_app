@@ -279,12 +279,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                       Row(
                         children: [
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "Contacts",
-                            cardText: "DIRECTORY",
-                            bottomRec: "greyRec",
+                          InkWell(
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "Contacts",
+                              cardText: "DIRECTORY",
+                              bottomRec: "greyRec",
+                            ),
+                            onTap: () {
+                              Navigator.pushNamed(context, Approutes.directory);
+                            },
                           ),
                           SizedBox(
                             width: w * 0.088,
