@@ -36,7 +36,6 @@ class LeaveApplication extends StatelessWidget {
     }
   }
 
-  final icons = [Icons.ac_unit, Icons.access_alarm, Icons.access_time];
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;

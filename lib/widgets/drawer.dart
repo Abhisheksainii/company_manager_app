@@ -345,7 +345,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           InkWell(
                             onTap: () {
                               Navigator.pushNamed(
-                                  context, Approutes.leaveapplication);
+                                  context, Approutes.leaveScreen);
                             },
                             child: CustomCard(
                               h: h,
@@ -406,12 +406,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           SizedBox(
                             width: w * 0.088,
                           ),
-                          CustomCard(
-                            h: h,
-                            w: w,
-                            imgPath: "wallet",
-                            cardText: "SALARY",
-                            bottomRec: "greyRec",
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, Approutes.salary);
+                            },
+                            child: CustomCard(
+                              h: h,
+                              w: w,
+                              imgPath: "wallet",
+                              cardText: "SALARY",
+                              bottomRec: "greyRec",
+                            ),
                           ),
                         ],
                       ),

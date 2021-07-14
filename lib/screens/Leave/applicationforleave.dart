@@ -19,7 +19,7 @@ class _ApplicationForleaveState extends State<ApplicationForleave> {
           children: [
             Container(
               width: w * 1.8,
-              height: h * 0.137,
+              height: h * 0.132,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Common.assetsImages + "Union 45.png"),
@@ -32,9 +32,14 @@ class _ApplicationForleaveState extends State<ApplicationForleave> {
                   children: [
                     Row(
                       children: [
-                        Image.asset(
-                          Common.assetsImages + "back.png",
-                          width: w * 0.07,
+                        InkWell(
+                          child: Image.asset(
+                            Common.assetsImages + "back.png",
+                            width: w * 0.07,
+                          ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
                         ),
                         SizedBox(
                           width: w * 0.06,
