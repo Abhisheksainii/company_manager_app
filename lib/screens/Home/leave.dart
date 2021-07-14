@@ -152,7 +152,7 @@ class _LeaveScreenState extends State<LeaveScreen> {
                 ),
               ),
               Positioned(
-                top: h * 0.24,
+                top: h * 0.235,
                 left: w * 0.06,
                 child: Column(
                   children: [

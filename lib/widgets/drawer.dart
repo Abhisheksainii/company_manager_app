@@ -207,7 +207,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   ),
                 ),
                 Positioned(
-                  top: h * 0.18,
+                  top: h * 0.17,
                   left: w * 0.05,
                   child: Container(
                     child: Column(
@@ -238,7 +238,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   ),
                 ),
                 Positioned(
-                  top: h * 0.25,
+                  top: h * 0.235,
                   left: w * 0.06,
                   child: Column(
                     children: [
