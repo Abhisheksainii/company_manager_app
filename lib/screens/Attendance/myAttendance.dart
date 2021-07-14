@@ -86,10 +86,15 @@ class _MyAttendenceState extends State<MyAttendence> {
                 child: Container(
                   child: Row(
                     children: [
-                      Container(
-                        child: Image(
-                          image: AssetImage(Common.assetsImages + "back.png"),
-                          width: w * 0.07,
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Container(
+                          child: Image(
+                            image: AssetImage(Common.assetsImages + "back.png"),
+                            width: w * 0.07,
+                          ),
                         ),
                       ),
                       SizedBox(

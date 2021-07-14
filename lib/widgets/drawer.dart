@@ -95,90 +95,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               Expanded(
                 child: Container(
                   color: Appcolors.primarycolor,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: w * 0.07),
-                    child: Container(
-                      child: Column(
-                        children: [
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "Home",
-                            text: "Home",
-                          ),
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "calendar",
-                            text: "My Attendance",
-                          ),
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "user2",
-                            text: "Profile",
-                          ),
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "QRCODE",
-                            text: "My QR Code",
-                          ),
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "Lock",
-                            text: "Change Password",
-                          ),
-                          DrawerItem(
-                            h: h,
-                            w: w,
-                            path: "logout2",
-                            text: "LogOut",
-                          ),
-                          SizedBox(
-                            height: h * 0.27,
-                          ),
-                          Container(
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: h * 0.03,
-                                  width: w * 0.03,
-                                  child: Image(
-                                    image: AssetImage(Common.assetsImages +
-                                        "facebook-logo.png"),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: w * 0.06,
-                                ),
-                                Container(
-                                  height: h * 0.055,
-                                  width: w * 0.055,
-                                  child: Image(
-                                    image: AssetImage(Common.assetsImages +
-                                        "instagram-logo.png"),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: w * 0.06,
-                                ),
-                                Container(
-                                  height: h * 0.05,
-                                  width: w * 0.05,
-                                  child: Image(
-                                    image: AssetImage(Common.assetsImages +
-                                        "twitter (20).png"),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                  child: DrawerItem(),
                 ),
               ),
             ],
@@ -505,51 +422,65 @@ class _CustomCardState extends State<CustomCard> {
 }
 
 class DrawerItem extends StatefulWidget {
-  const DrawerItem({
-    Key key,
-    @required this.h,
-    @required this.path,
-    this.text,
-    @required this.w,
-  }) : super(key: key);
-
-  final double h;
-  final double w;
-  final String path;
-  final String text;
-
   @override
   _DrawerItemState createState() => _DrawerItemState();
 }
 
 class _DrawerItemState extends State<DrawerItem> {
+  List texts = [
+    "Home",
+    "My Attendance",
+    "Profile",
+    "My QR Code",
+    "Change Password",
+    "LogOut"
+  ];
+
+  List paths = ["Home", "calendar", "user2", "QRCODE", "Lock", "logout2"];
+  List screenPaths = [
+    Approutes.homeScreen,
+    Approutes.myattendance,
+    Approutes.profile
+  ];
+  List<bool> isHighlighted = [true, false, false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: EdgeInsets.only(top: h * 0.02),
-      child: Container(
-        child: Row(
-          children: [
-            Container(
-              height: widget.h * 0.06,
-              width: widget.w * 0.06,
-              child: Image(
-                image: AssetImage(Common.assetsImages + "${widget.path}.png"),
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(screenPaths[index]);
+            for (var i = 0; i < isHighlighted.length; i++) {
+              setState(() {
+                if (index == i) {
+                  // ignore: unnecessary_statements
+                  isHighlighted[index] == true;
+                } else {
+                  // ignore: unnecessary_statements
+                  isHighlighted[i] == false;
+                }
+              });
+            }
+          },
+          child: Container(
+            color: isHighlighted[index] ? Color(0xFF00A7EF) : Color(0xff00B2F3),
+            child: ListTile(
+              leading: Image.asset(
+                Common.assetsImages + "${paths[index]}.png",
+                width: w * 0.06,
+              ),
+              title: Text(
+                texts[index],
+                style: GoogleFonts.poppins(
+                    fontSize: w * 0.038, color: Colors.white),
               ),
             ),
-            SizedBox(
-              width: widget.w * 0.045,
-            ),
-            Text(
-              "${widget.text}",
-              style: GoogleFonts.poppins(
-                  fontSize: widget.w * 0.038, color: Colors.white),
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
+      itemCount: texts.length,
     );
   }
 }
