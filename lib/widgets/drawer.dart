@@ -453,40 +453,75 @@ class _DrawerItemState extends State<DrawerItem> {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            Navigator.of(context).pushNamed(screenPaths[index]);
-            for (var i = 0; i < isHighlighted.length; i++) {
-              setState(() {
-                if (index == i) {
-                  // ignore: unnecessary_statements
-                  isHighlighted[index] == true;
-                } else {
-                  // ignore: unnecessary_statements
-                  isHighlighted[i] == false;
+    return Column(
+      children: [
+        ListView.builder(
+          shrinkWrap: true,
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed(screenPaths[index]);
+                for (var i = 0; i < isHighlighted.length; i++) {
+                  setState(() {
+                    if (index == i) {
+                      // ignore: unnecessary_statements
+                      isHighlighted[index] == true;
+                    } else {
+                      // ignore: unnecessary_statements
+                      isHighlighted[i] == false;
+                    }
+                  });
                 }
-              });
-            }
+              },
+              child: Container(
+                color: isHighlighted[index]
+                    ? Color(0xFF00A7EF)
+                    : Color(0xff00B2F3),
+                child: ListTile(
+                  leading: Image.asset(
+                    Common.assetsImages + "${paths[index]}.png",
+                    width: w * 0.06,
+                  ),
+                  title: Text(
+                    texts[index],
+                    style: GoogleFonts.poppins(
+                        fontSize: w * 0.038, color: Colors.white),
+                  ),
+                ),
+              ),
+            );
           },
-          child: Container(
-            color: isHighlighted[index] ? Color(0xFF00A7EF) : Color(0xff00B2F3),
-            child: ListTile(
-              leading: Image.asset(
-                Common.assetsImages + "${paths[index]}.png",
-                width: w * 0.06,
+          itemCount: texts.length,
+        ),
+        SizedBox(
+          height: h * 0.3,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: w * 0.05),
+          child: Row(
+            children: [
+              Image.asset(
+                Common.assetsImages + "facebook-logo.png",
+                width: w * 0.03,
               ),
-              title: Text(
-                texts[index],
-                style: GoogleFonts.poppins(
-                    fontSize: w * 0.038, color: Colors.white),
+              SizedBox(
+                width: w * 0.065,
               ),
-            ),
+              Image.asset(
+                Common.assetsImages + "instagram-logo.png",
+                width: w * 0.055,
+              ),
+              SizedBox(
+                width: w * 0.065,
+              ),
+              Image.asset(
+                Common.assetsImages + "twitter (20).png",
+                width: w * 0.055,
+              ),
+            ],
           ),
-        );
-      },
-      itemCount: texts.length,
+        )
+      ],
     );
   }
 }

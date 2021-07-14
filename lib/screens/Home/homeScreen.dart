@@ -313,25 +313,23 @@ class _CustomCardState extends State<CustomCard> {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(top: widget.h * 0.03),
-              child: Container(
-                child: Column(
-                  children: [
-                    Container(
-                      height: widget.h * 0.12,
-                      width: widget.w * 0.12,
-                      child: Image(
-                        image: AssetImage(
-                            Common.assetsImages + "${widget.imgPath}.png"),
-                      ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    Common.assetsImages + "${widget.imgPath}.png",
+                    width: widget.w * 0.12,
+                  ),
+                  SizedBox(
+                    height: widget.h * 0.025,
+                  ),
+                  Text(
+                    "${widget.cardText}",
+                    style: GoogleFonts.poppins(
+                      fontSize: widget.w * 0.04,
                     ),
-                    Text(
-                      "${widget.cardText}",
-                      style: GoogleFonts.poppins(
-                        fontSize: widget.w * 0.04,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
