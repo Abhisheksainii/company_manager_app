@@ -19,10 +19,11 @@ class _ClaimEntryState extends State<ClaimEntry> {
         children: [
           Container(
             width: w * 1,
-            height: h * 0.1318,
+            height: 113,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(Common.assetsImages + "Union 45.png"),
+                fit: BoxFit.cover,
               ),
             ),
             child: Padding(

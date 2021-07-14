@@ -9,7 +9,7 @@ class MyAttendence extends StatefulWidget {
 }
 
 class _MyAttendenceState extends State<MyAttendence> {
-  List items = [30, 29, 28, 27, 26, 25, 24];
+  List items = [30, 29, 28, 27, 26, 25, 24, 22, 22, 2];
   List state = [
     "Attendance",
     "Absent",
@@ -17,7 +17,10 @@ class _MyAttendenceState extends State<MyAttendence> {
     "Attendance",
     "Attendance",
     "Attendance",
-    "Attendance"
+    "Attendance",
+    "Absent",
+    "Absent",
+    "Absent",
   ];
   List colors = [
     Color(0xFF02D07E),
@@ -26,7 +29,10 @@ class _MyAttendenceState extends State<MyAttendence> {
     Color(0xFF02D07E),
     Color(0xFF02D07E),
     Color(0xFF02D07E),
-    Color(0xFF02D07E)
+    Color(0xFF02D07E),
+    Color(0xFFFF4B4B),
+    Color(0xFFFF4B4B),
+    Color(0xFFFF4B4B),
   ];
   List time1 = [
     "09:00",
@@ -36,6 +42,9 @@ class _MyAttendenceState extends State<MyAttendence> {
     "09:00",
     "09:00",
     "09:00",
+    "_:__",
+    "_:__",
+    "_:__",
   ];
   List time2 = [
     "18:00",
@@ -45,6 +54,9 @@ class _MyAttendenceState extends State<MyAttendence> {
     "18:00",
     "18:00",
     "18:00",
+    "_:__",
+    "_:__",
+    "_:__",
   ];
   List time3 = [
     "01:00",
@@ -54,6 +66,9 @@ class _MyAttendenceState extends State<MyAttendence> {
     "01:00",
     "01:00",
     "01:00",
+    "_:__",
+    "_:__",
+    "_:__",
   ];
 
   List colors2 = [
@@ -64,6 +79,9 @@ class _MyAttendenceState extends State<MyAttendence> {
     Color(0xFF00C0F9),
     Color(0xFF00C0F9),
     Color(0xFF00C0F9),
+    Color(0xFF707070),
+    Color(0xFF707070),
+    Color(0xFF707070),
   ];
   @override
   Widget build(BuildContext context) {
@@ -75,10 +93,11 @@ class _MyAttendenceState extends State<MyAttendence> {
           children: [
             Container(
               width: w * 1,
-              height: h * 0.1318,
+              height: 113,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Common.assetsImages + "Union 45.png"),
+                  fit: BoxFit.cover,
                 ),
               ),
               child: Padding(
@@ -134,14 +153,12 @@ class _MyAttendenceState extends State<MyAttendence> {
             ),
             Expanded(
               child: Container(
-                width: w * 2.0,
-                height: h * 0.15,
                 color: Colors.white,
                 child: ListView.separated(
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: EdgeInsets.only(
-                            top: h * 0.007, left: w * 0.05, bottom: h * 0.01),
+                        padding:
+                            EdgeInsets.only(left: w * 0.05, bottom: h * 0.01),
                         child: Container(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

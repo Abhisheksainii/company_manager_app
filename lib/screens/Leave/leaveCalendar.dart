@@ -20,11 +20,11 @@ class _LeaveCalendarState extends State<LeaveCalendar> {
         children: [
           Container(
             width: w * 1.8,
-            height: h * 0.132,
+            height: 113,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(Common.assetsImages + "Union 45.png"),
-              ),
+                  image: AssetImage(Common.assetsImages + "Union 45.png"),
+                  fit: BoxFit.cover),
             ),
             child: Padding(
               padding: EdgeInsets.only(left: w * 0.04, top: h * 0.04),

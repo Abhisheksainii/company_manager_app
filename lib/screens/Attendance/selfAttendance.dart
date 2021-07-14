@@ -20,11 +20,11 @@ class _SelfAttendenceState extends State<SelfAttendence> {
           children: [
             Container(
               width: w * 1,
-              height: h * 0.1318,
+              height: 113,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(Common.assetsImages + "Union 45.png"),
-                ),
+                    image: AssetImage(Common.assetsImages + "Union 45.png"),
+                    fit: BoxFit.cover),
               ),
               child: Padding(
                 padding: EdgeInsets.only(top: h * 0.04, left: w * 0.04),

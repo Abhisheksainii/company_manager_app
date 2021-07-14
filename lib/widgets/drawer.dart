@@ -19,6 +19,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SliderMenuContainer(
+        isDraggable: true,
         hasAppBar: false,
         isTitleCenter: false,
         appBarColor: Colors.white,

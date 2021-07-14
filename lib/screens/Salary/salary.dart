@@ -9,182 +9,187 @@ class Salary extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SafeArea(
-        child: Stack(clipBehavior: Clip.none, children: [
-          Positioned(
-            child: Image.asset(Common.assetsImages + "Rectangle.png"),
+      body: Stack(clipBehavior: Clip.none, children: [
+        Positioned(
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(Common.assetsImages + "Rectangle.png"),
+                  fit: BoxFit.cover),
+            ),
+            height: 155,
           ),
-          Padding(
-            padding:
-                EdgeInsets.symmetric(horizontal: w * 0.05, vertical: h * 0.025),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Image.asset(
-                        Common.assetsImages + "back.png",
-                        width: w * 0.07,
-                      ),
-                    ),
-                    SizedBox(
-                      width: w * 0.06,
-                    ),
-                    Text(
-                      "Salary",
-                      style: GoogleFonts.poppins(
-                          fontSize: w * 0.045,
-                          color: Appcolors.whitecolor,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Image.asset(
-                      Common.assetsImages + "search.png",
-                      width: w * 0.06,
-                    ),
-                    SizedBox(
+        ),
+        Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: w * 0.05, vertical: h * 0.056),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Image.asset(
+                      Common.assetsImages + "back.png",
                       width: w * 0.07,
                     ),
-                    Image.asset(
-                      Common.assetsImages + "bell.png",
-                      width: w * 0.06,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            top: h * 0.08,
-            left: w * 0.06,
-            child: Container(
-              height: h * 0.2,
-              width: w * 0.36,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              child: Image.asset(
-                Common.assetsImages + "Ellipse 10.png",
-              ),
-            ),
-          ),
-          Positioned(
-            top: h * 0.19,
-            left: w * 0.43,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Shafiul Hasan",
-                  style: TextStyle(
-                      fontSize: h * 0.022,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xfff00C0F9)),
-                ),
-                Text(
-                  "Co-Founder",
-                  style: TextStyle(
-                      color: Colors.grey.shade500, fontSize: h * 0.016),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            left: w * 0.7,
-            top: h * 0.09,
-            child: Row(
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  height: h * 0.1,
-                  width: w * 0.1,
-                  decoration: BoxDecoration(
-                    color: Appcolors.whitecolor,
-                    shape: BoxShape.circle,
                   ),
-                  child: Image.asset(
-                    Common.assetsImages + "phone.png",
-                    height: h * 0.05,
-                    width: w * 0.05,
+                  SizedBox(
+                    width: w * 0.06,
                   ),
+                  Text(
+                    "Salary",
+                    style: GoogleFonts.poppins(
+                        fontSize: w * 0.045,
+                        color: Appcolors.whitecolor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Image.asset(
+                    Common.assetsImages + "search.png",
+                    width: w * 0.06,
+                  ),
+                  SizedBox(
+                    width: w * 0.07,
+                  ),
+                  Image.asset(
+                    Common.assetsImages + "bell.png",
+                    width: w * 0.06,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          top: h * 0.08,
+          left: w * 0.1,
+          child: Container(
+            height: h * 0.2,
+            width: w * 0.3,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            child: Image.asset(
+              Common.assetsImages + "Ellipse 10.png",
+            ),
+          ),
+        ),
+        Positioned(
+          top: h * 0.19,
+          left: w * 0.43,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Shafiul Hasan",
+                style: TextStyle(
+                    fontSize: h * 0.022,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xfff00C0F9)),
+              ),
+              Text(
+                "Co-Founder",
+                style:
+                    TextStyle(color: Colors.grey.shade500, fontSize: h * 0.016),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          left: w * 0.7,
+          top: h * 0.09,
+          child: Row(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                height: h * 0.1,
+                width: w * 0.1,
+                decoration: BoxDecoration(
+                  color: Appcolors.whitecolor,
+                  shape: BoxShape.circle,
                 ),
-                SizedBox(
+                child: Image.asset(
+                  Common.assetsImages + "phone.png",
+                  height: h * 0.05,
                   width: w * 0.04,
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  height: h * 0.1,
-                  width: w * 0.1,
-                  decoration: BoxDecoration(
-                    color: Appcolors.whitecolor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.asset(
-                    Common.assetsImages + "mail.png",
-                    height: h * 0.05,
-                    width: w * 0.05,
-                  ),
+              ),
+              SizedBox(
+                width: w * 0.04,
+              ),
+              Container(
+                alignment: Alignment.center,
+                height: h * 0.1,
+                width: w * 0.1,
+                decoration: BoxDecoration(
+                  color: Appcolors.whitecolor,
+                  shape: BoxShape.circle,
                 ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: h * 0.3, left: w * 0.06),
-            child: Row(
-              children: [
-                Column(
-                  children: [
-                    SalaryInfo(
-                      h: h,
-                      w: w,
-                      heading: "PAID INVOICE",
-                      money: "600",
-                    ),
-                    SizedBox(
-                      height: h * 0.02,
-                    ),
-                    SalaryInfo(
-                      h: h,
-                      w: w,
-                      heading: "COMPLETED PROJECTS",
-                      money: "600",
-                    ),
-                  ],
-                ),
-                SizedBox(
+                child: Image.asset(
+                  Common.assetsImages + "mail.png",
+                  height: h * 0.05,
                   width: w * 0.04,
                 ),
-                Column(
-                  children: [
-                    SalaryInfo(
-                      h: h,
-                      w: w,
-                      heading: "UNPAID INVOICE",
-                      money: "470",
-                    ),
-                    SizedBox(
-                      height: h * 0.02,
-                    ),
-                    SalaryInfo(
-                      h: h,
-                      w: w,
-                      heading: "IN PROGRESS PROJECTS",
-                      money: "470",
-                    ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ]),
-      ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: h * 0.3, left: w * 0.06),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  SalaryInfo(
+                    h: h,
+                    w: w,
+                    heading: "PAID INVOICE",
+                    money: "600",
+                  ),
+                  SizedBox(
+                    height: h * 0.02,
+                  ),
+                  SalaryInfo(
+                    h: h,
+                    w: w,
+                    heading: "COMPLETED PROJECTS",
+                    money: "600",
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: w * 0.04,
+              ),
+              Column(
+                children: [
+                  SalaryInfo(
+                    h: h,
+                    w: w,
+                    heading: "UNPAID INVOICE",
+                    money: "470",
+                  ),
+                  SizedBox(
+                    height: h * 0.02,
+                  ),
+                  SalaryInfo(
+                    h: h,
+                    w: w,
+                    heading: "IN PROGRESS PROJECTS",
+                    money: "470",
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
@@ -227,6 +232,7 @@ class SalaryInfo extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         color: Appcolors.whitecolor,
+        borderRadius: BorderRadius.all(Radius.circular(5)),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.3),
