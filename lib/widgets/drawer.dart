@@ -243,7 +243,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
                 Positioned(
                   top: h * 0.235,
-                  left: w * 0.078,
+                  left: w * 0.054,
                   child: Column(
                     children: [
                       Row(
@@ -384,7 +384,7 @@ class _CustomCardState extends State<CustomCard> {
   Widget build(BuildContext context) {
     return Container(
       height: widget.h * 0.22,
-      width: widget.w * 0.4,
+      width: widget.w * 0.42,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
         color: Appcolors.whitecolor,
