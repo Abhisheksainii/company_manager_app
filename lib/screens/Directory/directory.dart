@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
@@ -5,7 +7,7 @@ import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TileSettingsss {
-  String tilecolor;
+  String? tilecolor;
 
   TileSettingsss({this.tilecolor});
 }

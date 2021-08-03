@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
@@ -5,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
 
 class TileSettings {
-  String tilecolor;
-  bool iseditable;
+  String? tilecolor;
+  bool? iseditable;
   TileSettings({this.tilecolor, this.iseditable});
 }
 
@@ -17,6 +19,7 @@ class LeaveApplication extends StatelessWidget {
     "Here is list 2 subtitle",
     "Here is list 3 subtitle"
   ];
+  
   List<TileSettings> tilesettings = [
     TileSettings(tilecolor: "green", iseditable: false),
     TileSettings(tilecolor: "blue", iseditable: false),
@@ -42,6 +45,9 @@ class LeaveApplication extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        onPressed: (){
+
+        },
         child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -207,7 +213,7 @@ class LeaveApplication extends StatelessWidget {
                                       Common.assetsImages + "editbox.png",
                                       width: w * 0.065,
                                     ),
-                                    visible: tilesettings[index].iseditable
+                                    visible: tilesettings[index].iseditable!
                                         ? true
                                         : false,
                                   ),

@@ -1,3 +1,5 @@
+
+
 import 'package:company_manager_app/utils/common.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:timelines/timelines.dart';
-import 'package:timeline_widget/timeline_widget.dart';
+
 
 class ProfileScreen extends StatelessWidget {
   List<String> personalheading = [
@@ -558,10 +560,10 @@ class ProfileScreen extends StatelessWidget {
 
 class timelineinfo extends StatelessWidget {
   const timelineinfo(
-      {Key key, @required this.h, @required this.w, this.head, this.info})
+      {Key? key, required this.h, required this.w, this.head, this.info})
       : super(key: key);
-  final String head;
-  final String info;
+  final String? head;
+  final String? info;
   final double h;
   final double w;
 
@@ -573,11 +575,11 @@ class timelineinfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            info,
+            info!,
             style: TextStyle(fontSize: h * 0.022, fontWeight: FontWeight.w600),
           ),
           Text(
-            head,
+            head!,
             style: TextStyle(fontSize: h * 0.016, color: Colors.grey.shade500),
           )
         ],
@@ -588,9 +590,9 @@ class timelineinfo extends StatelessWidget {
 
 class Timelinee extends StatelessWidget {
   const Timelinee({
-    Key key,
-    @required this.w,
-    @required this.h,
+    Key? key,
+    required this.w,
+    required this.h,
   }) : super(key: key);
 
   final double w;

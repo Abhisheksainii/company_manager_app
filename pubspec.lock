@@ -78,13 +78,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
-  draggable_bottom_sheet:
-    dependency: "direct main"
-    description:
-      name: draggable_bottom_sheet
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.2"
   fake_async:
     dependency: transitive
     description:
@@ -317,13 +310,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.19"
-  timeline_widget:
-    dependency: "direct main"
-    description:
-      name: timeline_widget
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.6"
   timelines:
     dependency: "direct main"
     description:

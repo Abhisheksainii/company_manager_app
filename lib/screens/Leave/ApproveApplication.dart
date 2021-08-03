@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
@@ -5,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
 
 class TileSetting {
-  String tilecolor;
-  bool iseditable;
+  String? tilecolor;
+  bool? iseditable;
   TileSetting({this.tilecolor, this.iseditable});
 }
 

@@ -1,3 +1,5 @@
+
+
 import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 import 'package:company_manager_app/utils/common.dart';
@@ -361,10 +363,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
 
 class CustomCard extends StatefulWidget {
   const CustomCard({
-    Key key,
-    @required this.h,
-    @required this.w,
-    @required this.imgPath,
+    Key? key,
+    required this.h,
+    required this.w,
+    required this.imgPath,
     this.cardText,
     this.bottomRec,
   }) : super(key: key);
@@ -372,8 +374,8 @@ class CustomCard extends StatefulWidget {
   final double h;
   final double w;
   final String imgPath;
-  final String cardText;
-  final String bottomRec;
+  final String? cardText;
+  final String? bottomRec;
 
   @override
   _CustomCardState createState() => _CustomCardState();

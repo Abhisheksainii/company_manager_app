@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
@@ -7,8 +9,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:company_manager_app/utils/TileColor.dart';
 
 class TileSettingss {
-  String tilecolor;
-  bool iseditable;
+  String? tilecolor;
+  bool? iseditable;
   TileSettingss({this.tilecolor, this.iseditable});
 }
 
@@ -45,6 +47,9 @@ class Claim extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          
+        },
         child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -201,7 +206,7 @@ class Claim extends StatelessWidget {
                                       Common.assetsImages + "editbox.png",
                                       width: w * 0.065,
                                     ),
-                                    visible: tilesettings[index].iseditable
+                                    visible: tilesettings[index].iseditable!
                                         ? true
                                         : false,
                                   ),

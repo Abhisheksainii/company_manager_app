@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
@@ -195,11 +197,11 @@ class Salary extends StatelessWidget {
 
 class SalaryInfo extends StatelessWidget {
   const SalaryInfo({
-    Key key,
-    @required this.h,
-    @required this.w,
-    @required this.heading,
-    @required this.money,
+    Key? key,
+    required this.h,
+    required this.w,
+    required this.heading,
+    required this.money,
   }) : super(key: key);
   final String money;
   final String heading;

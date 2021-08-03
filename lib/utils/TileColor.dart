@@ -1,13 +1,15 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:company_manager_app/utils/app_colors.dart';
 
 class Tile extends StatelessWidget {
-  const Tile({Key key, @required this.h, @required this.w, this.colr})
+  const Tile({Key? key, required this.h, required this.w, this.colr})
       : super(key: key);
 
   final double h;
   final double w;
-  final Color colr;
+  final Color? colr;
 
   @override
   Widget build(BuildContext context) {

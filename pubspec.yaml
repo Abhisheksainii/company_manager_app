@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -26,11 +26,11 @@ dependencies:
 
   sizer: ^2.0.13
   google_fonts: ^2.1.0
-  draggable_bottom_sheet: ^0.1.2
+  
   flutter_slider_drawer: ^2.0.0
   contained_tab_bar_view: ^0.8.0
   timelines: ^0.1.0
-  timeline_widget: ^1.0.6
+ 
 
 
   # The following adds the Cupertino Icons font to your application.

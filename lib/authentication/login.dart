@@ -1,3 +1,5 @@
+
+
 import 'package:company_manager_app/routes/app_routes.dart';
 import 'package:company_manager_app/utils/common.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
+    double?/*!*/ h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
