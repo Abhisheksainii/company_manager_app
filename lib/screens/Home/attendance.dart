@@ -203,7 +203,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                             h: h,
                             w: w,
                             imgPath: "Inout",
-                            cardText: "IN/OUT          ATTENDANCE",
+                            cardText: "IN / OUT          ATTENDANCE",
                             bottomRec: "greyRec",
                           ),
                         ),
